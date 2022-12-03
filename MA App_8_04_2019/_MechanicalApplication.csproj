@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05A0718F-385E-46A5-A188-20CA57A0F97A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LeaveMeAlone</RootNamespace>
+    <AssemblyName>LeaveMeAlone</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\LMAServer_06_08_V2\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularPulsingButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularPulsingButton.2.0.0\lib\CircularPulsingButton.dll</HintPath>
+    </Reference>
+    <Reference Include="CodedUIExtension.Registrar">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 18.1\Components\System\Windows Forms\CodedUIExtension.Registrar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Persistent.Base.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="InputSimulator, Version=0.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Polaris.Ui.1.0.32872.5337\lib\net40-client\InputSimulator.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.0.1044, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\MaterialDesignThemes.2.4.0.1044\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.3.0\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Polaris, Version=1.0.37291.45298, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Polaris.Common.1.0.37291.45298\lib\net40-client\Polaris.dll</HintPath>
+    </Reference>
+    <Reference Include="Polaris.Ui, Version=1.0.32872.5337, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Polaris.Ui.1.0.32872.5337\lib\net40-client\Polaris.Ui.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestSharp, Version=106.3.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\..\LMAServer_30_07\packages\RestSharp.106.3.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\LMAServer\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\LMAServer_06_08_V2\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="WinFormSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFromSkin.1.0.2\lib\WinFormSkin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CurrentStatus.Designer.cs">
+      <DependentUpon>CurrentStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\TopAndBottomBorderButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\RightBorderButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FilterViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterViewForm.Designer.cs">
+      <DependentUpon>FilterViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LightViewForm.Designer.cs">
+      <DependentUpon>LightViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="listUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="listUsers.Designer.cs">
+      <DependentUpon>listUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OilViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OilViewForm.Designer.cs">
+      <DependentUpon>OilViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OvaliPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TireViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TireViewForm.Designer.cs">
+      <DependentUpon>TireViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfileViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserProfileViewForm.Designer.cs">
+      <DependentUpon>UserProfileViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_AutoParts\AutoParts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_AutoParts\AutoParts.Designer.cs">
+      <DependentUpon>AutoParts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_AutoParts\CarBatteries\CarBatteriesLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_AutoParts\CarBatteries\CarBatteriesLayout.Designer.cs">
+      <DependentUpon>CarBatteriesLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_AutoParts\Filters\FilterSizeInformation.cs" />
+    <Compile Include="_AutoParts\Filters\FiltersLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_AutoParts\Filters\FiltersLayout.Designer.cs">
+      <DependentUpon>FiltersLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_AutoParts\Lights\LightsLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_AutoParts\Lights\LightsLayout.Designer.cs">
+      <DependentUpon>LightsLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_AutoParts\Oils\OilsLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_AutoParts\Oils\OilsLayout.Designer.cs">
+      <DependentUpon>OilsLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_AutoParts\Tires\AutoPart.cs" />
+    <Compile Include="_AutoParts\Tires\TiresLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_AutoParts\Tires\TiresLayout.Designer.cs">
+      <DependentUpon>TiresLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Cart\MyOrders\CartItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Cart\MyOrders\CartItems.Designer.cs">
+      <DependentUpon>CartItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Cart\MyOrders\Order.cs" />
+    <Compile Include="_Cart\CartItem.cs" />
+    <Compile Include="_Cart\MyOrders\MyOrdersLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Cart\MyOrders\MyOrdersLayout.Designer.cs">
+      <DependentUpon>MyOrdersLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Information\Employees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Information\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Information\AboutUs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Information\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Information\Employee.cs" />
+    <Compile Include="_Services\FavouritesLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Services\FavouritesLayout.Designer.cs">
+      <DependentUpon>FavouritesLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\BottomBorderButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Information\InformationLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Information\InformationLayout.Designer.cs">
+      <DependentUpon>InformationLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Cart\MyCartLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Cart\MyCartLayout.Designer.cs">
+      <DependentUpon>MyCartLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Settings\DeleteUserAccountConfirmation_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_Settings\DeleteUserAccountConfirmation_.Designer.cs">
+      <DependentUpon>DeleteUserAccountConfirmation_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\MyWindowsButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="__ErrorMessageHandlers\_NewUserErrorMessageHandler.cs" />
+    <Compile Include="__ErrorMessageHandlers\_LoginErrorMessageHandler.cs" />
+    <Compile Include="__ErrorMessageHandlers\_MainErrorMessageHandler.cs" />
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formNewUser.Designer.cs">
+      <DependentUpon>formNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="__Databases\LocalDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="__Databases\LocalDatabaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalDatabaseDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\MyCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_Settings\MyProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Settings\MyProfile.Designer.cs">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\MyRoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\MyRoundedEdgeButton1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="_Settings\SettingsLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Settings\SettingsLayout.Designer.cs">
+      <DependentUpon>SettingsLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Cart\CartLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Cart\CartLayout.Designer.cs">
+      <DependentUpon>CartLayout.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CurrentStatus.resx">
+      <DependentUpon>CurrentStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterViewForm.resx">
+      <DependentUpon>FilterViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightViewForm.resx">
+      <DependentUpon>LightViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listUsers.resx">
+      <DependentUpon>listUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OilViewForm.resx">
+      <DependentUpon>OilViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TireViewForm.resx">
+      <DependentUpon>TireViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserProfileViewForm.resx">
+      <DependentUpon>UserProfileViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AutoParts\AutoParts.resx">
+      <DependentUpon>AutoParts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AutoParts\CarBatteries\CarBatteriesLayout.resx">
+      <DependentUpon>CarBatteriesLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AutoParts\Filters\FiltersLayout.resx">
+      <DependentUpon>FiltersLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AutoParts\Lights\LightsLayout.resx">
+      <DependentUpon>LightsLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AutoParts\Oils\OilsLayout.resx">
+      <DependentUpon>OilsLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_AutoParts\Tires\TiresLayout.resx">
+      <DependentUpon>TiresLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cart\MyOrders\CartItems.resx">
+      <DependentUpon>CartItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cart\MyOrders\MyOrdersLayout.resx">
+      <DependentUpon>MyOrdersLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Information\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Information\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Services\FavouritesLayout.resx">
+      <DependentUpon>FavouritesLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Information\InformationLayout.resx">
+      <DependentUpon>InformationLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cart\MyCartLayout.resx">
+      <DependentUpon>MyCartLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Settings\DeleteUserAccountConfirmation_.resx">
+      <DependentUpon>DeleteUserAccountConfirmation_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNewUser.resx">
+      <DependentUpon>formNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Settings\MyProfile.resx">
+      <DependentUpon>MyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Settings\SettingsLayout.resx">
+      <DependentUpon>SettingsLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Cart\CartLayout.resx">
+      <DependentUpon>CartLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\LeaveMeAlone._Friends.Friend.datasource" />
+    <None Include="Properties\DataSources\LeaveMeAlone._Friends.Friend1.datasource" />
+    <None Include="Properties\DataSources\LeaveMeAlone._Groups.Group.datasource" />
+    <None Include="Properties\DataSources\LeaveMeAlone._Groups.GroupRequests_Invites.datasource" />
+    <None Include="Properties\DataSources\LeaveMeAlone._Groups.ReceivedGroupRequest_RequestData.datasource" />
+    <None Include="Properties\DataSources\LeaveMeAlone._Groups._Models.GroupRequests_Invites.datasource" />
+    <None Include="Properties\DataSources\LeaveMeAlone._Information.Employee.datasource" />
+    <None Include="_AUnimportant\Content\Themes\uniformjs\agent\css\uniform.agent.scss" />
+    <None Include="_AUnimportant\Content\Themes\uniformjs\aristo\css\uniform.aristo.scss" />
+    <None Include="_AUnimportant\Content\Themes\uniformjs\default\css\uniform.default.scss" />
+    <None Include="_AUnimportant\Content\Themes\uniformjs\jeans\css\uniform.jeans.scss" />
+    <None Include="_AUnimportant\Content\Themes\uniformjs\_base\css\uniform._base.scss" />
+    <None Include="__Databases\LocalDatabaseDataSet.xsc">
+      <DependentUpon>LocalDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="__Databases\LocalDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="__Databases\LocalDatabaseDataSet.xss">
+      <DependentUpon>LocalDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="__Databases\LocalDatabaseDataSet1.xsc">
+      <DependentUpon>LocalDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="__Databases\LocalDatabaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LocalDatabaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="__Databases\LocalDatabaseDataSet1.xss">
+      <DependentUpon>LocalDatabaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MainWindowViewModel.datasource" />
+    <None Include="Properties\DataSources\UserList.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowGroupMembers.bmp" />
+    <None Include="Resources\icons8-user-groups-26.png" />
+    <None Include="Resources\icons8-export-26.png" />
+    <None Include="Resources\icons8-export-26 %281%29.png" />
+    <None Include="Resources\receivedNormal.png" />
+    <None Include="Resources\sentNormal.png" />
+    <None Include="Resources\icons8-info-26.png" />
+    <None Include="Resources\Icon1.ico" />
+    <None Include="Resources\AcceptUser.ico" />
+    <None Include="Resources\AddButton.ico" />
+    <None Include="Resources\AddUser.ico" />
+    <None Include="Resources\Admin.ico" />
+    <None Include="Resources\ArrowDown.ico" />
+    <None Include="Resources\ArrowLeft.ico" />
+    <None Include="Resources\Chat.ico" />
+    <None Include="Resources\ChatButton.ico" />
+    <None Include="Resources\Clock.ico" />
+    <None Include="Resources\Close.ico" />
+    <None Include="Resources\DeleteButton.ico" />
+    <None Include="Resources\EditUser.ico" />
+    <None Include="Resources\Friends.ico" />
+    <None Include="Resources\GreenIcon.ico" />
+    <None Include="Resources\Groups.ico" />
+    <None Include="Resources\InfoButton.ico" />
+    <None Include="Resources\Key.ico" />
+    <None Include="Resources\ListButton.ico" />
+    <None Include="Resources\Lock.ico" />
+    <None Include="Resources\Logout.ico" />
+    <None Include="Resources\Members.ico" />
+    <None Include="Resources\RedIcon.ico" />
+    <None Include="Resources\Refresh.ico" />
+    <None Include="Resources\RemoveButton.ico" />
+    <None Include="Resources\RemoveUser.ico" />
+    <None Include="Resources\SearchButton.ico" />
+    <None Include="Resources\Settings.ico" />
+    <None Include="Resources\Settings2.ico" />
+    <None Include="Resources\Settings3.ico" />
+    <None Include="Resources\User.ico" />
+    <None Include="Resources\User2.ico" />
+    <Content Include="Icon.ico" />
+    <None Include="Resources\icons8-christmas-star-20.png" />
+    <None Include="Resources\EmptyStar.png" />
+    <None Include="Resources\RefreshNormal.png" />
+    <None Include="Resources\RefreshNormal1.png" />
+    <None Include="Resources\RefreshHover.png" />
+    <None Include="Resources\RefreshNormal2.png" />
+    <None Include="Resources\RefreshHover1.png" />
+    <None Include="Resources\Unchecked.png" />
+    <None Include="Resources\Checked.png" />
+    <None Include="Resources\Delete-24.png" />
+    <None Include="Resources\DeleteRequest-24.png" />
+    <None Include="Resources\Accept-24.png" />
+    <None Include="Resources\JoinGroup.png" />
+    <None Include="Resources\Offline.png" />
+    <None Include="Resources\Unavailable.png" />
+    <None Include="Resources\noImage.jpg" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\agent\css\uniform.agent.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\agent\css\uniform.agent.min.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\agent\images\bg-input-agent.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\agent\images\bg-input-focus-agent.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\agent\images\sprite-agent.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\aristo\css\uniform.aristo.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\aristo\css\uniform.aristo.min.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\aristo\images\bg-input-aristo.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\aristo\images\bg-input-focus-aristo.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\aristo\images\sprite-aristo.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\default\css\uniform.default.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\default\css\uniform.default.min.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\default\images\bg-input-focus.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\default\images\bg-input.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\default\images\sprite.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\css\uniform.jeans.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\css\uniform.jeans.min.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\images\bg-input-focus-jeans.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\images\bg-input-focus-retina-jeans.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\images\bg-input-jeans.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\images\bg-input-retina-jeans.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\images\sprite-jeans.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\jeans\images\sprite-retina-jeans.png" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\_base\css\uniform._base.css" />
+    <Content Include="_AUnimportant\Content\Themes\uniformjs\_base\css\uniform._base.min.css" />
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\icons8-account-80.png" />
+    <None Include="Resources\icons8-delete-48.png" />
+    <None Include="Resources\icons8-expand-arrow-48.png" />
+    <None Include="Resources\icons8-minus-24.png" />
+    <None Include="Resources\icons8-settings-50.png" />
+    <None Include="Resources\icons8-collapse-arrow-48 -.png" />
+    <None Include="Resources\icons8-exit-26.png" />
+    <None Include="Resources\Logout_Normal.png" />
+    <None Include="Resources\icons8-user-groups-100.png" />
+    <None Include="Resources\icons8-user-groups-64.png" />
+    <None Include="Resources\icons8-user-groups-40.png" />
+    <None Include="Resources\icons8-user-groups-64 %281%29.png" />
+    <None Include="Resources\icons8-settings-64.png" />
+    <None Include="Resources\icons8-logout-rounded-up-64.png" />
+    <None Include="Resources\icons8-shutdown-40.png" />
+    <None Include="Resources\icons8-settings-55.png" />
+    <None Include="Resources\icons8-shutdown-55.png" />
+    <None Include="Resources\Available.png" />
+    <None Include="Resources\icons8-exit-sign-55.png" />
+    <None Include="Resources\icons8-user-groups-60 %281%29.png" />
+    <None Include="Resources\icons8-user-groups-60.png" />
+    <None Include="Resources\icons8-services-60.png" />
+    <None Include="Resources\icons8-exit-sign-60.png" />
+    <None Include="Resources\Available1.png" />
+    <None Include="Resources\Unavailable1.png" />
+    <None Include="Resources\OnlineSwitch.png" />
+    <None Include="Resources\icons8-switch-off-60 %281%29.png" />
+    <None Include="Resources\icons8-switch-off-60.png" />
+    <None Include="Resources\icons8-user-groups-30.png" />
+    <None Include="Resources\icons8-delete-48 %281%29.png" />
+    <None Include="Resources\icons8-detective-filled-26.png" />
+    <None Include="Resources\icons8-edit-image-15.png" />
+    <None Include="Resources\icons8-edit-image-25.png" />
+    <None Include="Resources\PASicon1.png" />
+    <None Include="Resources\PASicon2.png" />
+    <None Include="Resources\PASicon3.png" />
+    <None Include="Resources\icons8-close-window-24.png" />
+    <None Include="Resources\icons8-close-window-24_Hover.png" />
+    <None Include="Resources\icons8-delete-26.png" />
+    <None Include="Resources\icons8-checked-26.png" />
+    <None Include="Resources\icons8-cancel-26.png" />
+    <None Include="Resources\icons8-checked-30.png" />
+    <None Include="Resources\icons8-detective-filled-26 %281%29.png" />
+    <Content Include="_AUnimportant\Scripts\jquery-1.6-vsdoc.js" />
+    <Content Include="_AUnimportant\Scripts\jquery-1.6.js" />
+    <Content Include="_AUnimportant\Scripts\jquery-1.6.min.js" />
+    <Content Include="_AUnimportant\Scripts\jquery.uniform.js" />
+    <Content Include="_AUnimportant\Scripts\jquery.uniform.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="__CS_ScriptsFolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMAServer23_08\LMA.Data.UI.Contracts\LMA.Data.UI.ViewModels.csproj">
+      <Project>{4bf92a40-f71a-4bac-a008-e75639fd5d53}</Project>
+      <Name>LMA.Data.UI.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

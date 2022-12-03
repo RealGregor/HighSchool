@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LMA.DATA.DbProvider\LMA.Data.DbProvider.csproj" />
+    <ProjectReference Include="..\LMA.Data\LMA.Data.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

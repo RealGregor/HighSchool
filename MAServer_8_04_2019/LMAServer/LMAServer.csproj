@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="4.0.1" />
+    <PackageReference Include="FluentValidation" Version="7.6.104" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="7.6.104" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="2.8.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="StackExchange.Redis.StrongName.Core" Version="1.1.605" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LMA.DATA.DbProvider\LMA.Data.DbProvider.csproj" />
+    <ProjectReference Include="..\LMA.Data.Filters\LMA.Data.Filters.csproj" />
+    <ProjectReference Include="..\LMA.Data.MSSQL\LMA.Data.MSSQL.csproj" />
+    <ProjectReference Include="..\LMA.Data.RedisProvider\LMA.Data.DcProvider.csproj" />
+    <ProjectReference Include="..\LMA.Data\LMA.Data.Contracts.csproj" />
+    <ProjectReference Include="..\LMA.HostedServices\LMA.HostedServices.csproj" />
+    <ProjectReference Include="..\LMA.Models\LMA.Data.Models.csproj" />
+    <ProjectReference Include="..\LMA.Services\LMA.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\LMAApp\LMALoginApplication\LeaveMeAlone\bin\Debug\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <HintPath>..\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design">
+      <HintPath>..\System.Web.Extensions.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions.VisualStudio.15.0">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PrivateAssemblies\System.Web.Extensions.VisualStudio.15.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
